@@ -55,14 +55,13 @@ public class TreeTest {
 
     @Test
     void testTreeIsNotAnAllyOfAnyCharacter() {
-        // Assuming we have a Character class with appropriate methods to interact with factions and Tree objects
         assertFalse(tree.isAlly(character), "Tree should not be an ally of any character.");
     }
 
     @Test
     void testTreeCannotBeHealed() {
         int initialHealth = tree.getHealth();
-        tree.heal(character, 50); // Assuming someCharacter is a placeholder for a Character object
+        tree.heal(character, 50);
 
         assertEquals(initialHealth, tree.getHealth(), "Tree health should remain the same after attempting to heal.");
     }
